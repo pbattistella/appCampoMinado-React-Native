@@ -3,7 +3,6 @@ import {StyleSheet, Text, View} from 'react-native'
 import params from './params'
 import Field from './components/Field'
 
-
 export default class App extends Component{
   render(){
     return(
@@ -12,6 +11,7 @@ export default class App extends Component{
         <Text style = {styles.welcome} >Tamanho:
           {params.getRowsAmount()} X {params.getColumnsAmount()} 
         </Text>
+        
         <Field/>
         <Field opened />
         <Field opened nearMines = {1} />
@@ -21,6 +21,11 @@ export default class App extends Component{
         <Field opened nearMines = {5} />
         <Field opened nearMines = {6} />
         <Field mined opened/>
+        <Field mined opened exploded/>
+        <Field flagged />
+        <Field flagged opened />
+
+        
       </View>
     )
   }
